@@ -74,3 +74,12 @@ class ProductImage(models.Model):
         verbose_name = "Изображение"
         verbose_name_plural = "Изображения"
         ordering = ['position', ]
+
+
+# Модель для Категории
+class Category(models.Model):
+    name = models.CharField(max_length=155, unique=True)
+    desciotion = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
